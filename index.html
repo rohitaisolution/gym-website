@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Gym</title>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0b0b;
+  color:white;
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  width:100%;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  z-index:1000;
+}
+
+header h1{
+  color:gold;
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+  radial-gradient(circle at top, rgba(255,215,0,0.2), transparent),
+  url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1');
+  background-size:cover;
+}
+
+.hero h2{
+  font-size:55px;
+  color:gold;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.8;
+}
+
+.btn{
+  margin-top:20px;
+  padding:12px 30px;
+  background:gold;
+  color:black;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  box-shadow:0 0 25px gold;
+}
+
+/* SECTION */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:15px;
+  width:220px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px gold;
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.stat{
+  font-size:30px;
+  color:gold;
+}
+
+/* PRICING */
+.price-card{
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.price-card:hover{
+  border:1px solid gold;
+}
+
+/* CONTACT */
+#contact{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  padding:20px;
+  background:black;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h2{
+    font-size:32px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>LUXURY GYM</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#plans">Plans</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Build Your Dream Body</h2>
+  <p>Premium Fitness Experience</p>
+  <a href="#contact" class="btn">Join Now</a>
+</section>
+
+<section>
+  <h2 data-aos="fade-up">Why Choose Us</h2>
+  <div class="stats">
+    <div class="stat" data-aos="zoom-in">500+ Members</div>
+    <div class="stat" data-aos="zoom-in">10+ Trainers</div>
+    <div class="stat" data-aos="zoom-in">5 Years Experience</div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 data-aos="fade-up">Our Services</h2>
+  <div class="cards">
+    <div class="card" data-aos="fade-up">🏋️ Personal Training</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">💪 Strength Training</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">🧘 Yoga</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">🔥 Fat Loss</div>
+  </div>
+</section>
+
+<section id="plans">
+  <h2 data-aos="fade-up">Membership Plans</h2>
+  <div class="cards">
+    <div class="card price-card" data-aos="zoom-in">
+      <h3>Basic</h3>
+      <p>₹999/month</p>
+    </div>
+    <div class="card price-card" data-aos="zoom-in" data-aos-delay="150">
+      <h3>Standard</h3>
+      <p>₹1999/month</p>
+    </div>
+    <div class="card price-card" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Premium</h3>
+      <p>₹2999/month</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Us</h2>
+  <p>📍 Your City</p>
+  <p>📞 +91 80006 23129</p>
+  <a href="https://wa.me/918000623129" class="btn">Chat on WhatsApp</a>
+</section>
+
+<a href="https://wa.me/918000623129" class="whatsapp">💬</a>
+
+<footer>
+  <p>© 2026 Luxury Gym</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000});
+</script>
+
+</body>
+</html>
